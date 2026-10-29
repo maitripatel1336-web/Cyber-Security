@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="SecureText is a web-based tool for encrypting and decrypting text securely using AES encryption.">
+
+    <meta name="theme-color" content="#081C15">
+
+    <title>SecureText | Encryption & Decryption</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                <span class="logo-icon">🔐</span>
+                <span>Secure<span class="highlight">Text</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#encrypt" class="nav-link">Encrypt / Decrypt</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+
+            <a href="#encrypt" class="nav-button">
+                Get Started <span>↗</span>
+            </a>
+
+            <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ================= HERO SECTION ================= -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-glow"></div>
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <div class="security-badge">
+                        <span class="status-dot"></span>
+                        YOUR PRIVACY MATTERS
+                    </div>
+
+                    <h1>
+                        Protect Your Text.
+                        <br>
+                        <span class="highlight">Secure Your Data.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Transform your ordinary messages into encrypted text
+                        using AES encryption. Decrypt your messages with the
+                        correct password, all through a simple web interface.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#encrypt" class="btn btn-primary">
+                            Start Encrypting
+                            <span>→</span>
+                        </a>
+
+                        <a href="#how-it-works" class="btn btn-secondary">
+                            Explore How It Works
+                        </a>
+
+                    </div>
+
+                    <div class="hero-features">
+
+                        <div class="hero-feature">
+                            <span class="feature-icon">🔒</span>
+                            <div>
+                                <strong>Password Based</strong>
+                                <small>Encryption</small>
+                            </div>
+                        </div>
+
+                        <div class="hero-feature">
+                            <span class="feature-icon">⚡</span>
+                            <div>
+                                <strong>Simple & Fast</strong>
+                                <small>Text Processing</small>
+                            </div>
+                        </div>
+
+                        <div class="hero-feature">
+                            <span class="feature-icon">💻</span>
+                            <div>
+                                <strong>Browser Based</strong>
+                                <small>No Backend Required</small>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO VISUAL -->
+
+                <div class="hero-visual">
+
+                    <div class="security-card">
+
+                        <div class="card-header">
+
+                            <div class="card-title">
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-title">
+                                    securetext.security
+                                </span>
+                            </div>
+
+                            <span class="card-status">
+                                ● SYSTEM READY
+                            </span>
+
+                        </div>
+
+                        <div class="shield-container">
+                            <div class="shield-ring ring-one"></div>
+                            <div class="shield-ring ring-two"></div>
+
+                            <div class="shield-icon">
+                                🛡️
+                            </div>
+                        </div>
+
+                        <div class="encryption-status">
+
+                            <div class="status-row">
+                                <span>Encryption Status</span>
+                                <span class="status-success">READY</span>
+                            </div>
+
+                            <div class="status-row">
+                                <span>Algorithm</span>
+                                <span>AES</span>
+                            </div>
+
+                            <div class="status-row">
+                                <span>Processing</span>
+                                <span>CLIENT-SIDE</span>
+                            </div>
+
+                        </div>
+
+                        <div class="code-preview">
+                            <span class="code-label">SECURE OUTPUT</span>
+
+                            <p>
+                                <span class="code-green">U2FsdGVkX1</span>
+                                <span class="code-gold">********</span>
+                            </p>
+
+                            <div class="code-footer">
+                                <span>Encrypted text preview</span>
+                                <span>•••</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="floating-tag tag-top">
+                        <span>🔐</span> Data Protection
+                    </div>
+
+                    <div class="floating-tag tag-bottom">
+                        <span>✓</span> Privacy Focused
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRUST BAR ================= -->
+
+        <section class="trust-section">
+
+            <div class="container trust-container">
+
+                <div class="trust-item">
+                    <span class="trust-icon">🔑</span>
+                    <div>
+                        <h3>Password Protection</h3>
+                        <p>Protect your messages with a password</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <span class="trust-icon">🔄</span>
+                    <div>
+                        <h3>Two-Way Processing</h3>
+                        <p>Encrypt and decrypt text</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <span class="trust-icon">🌐</span>
+                    <div>
+                        <h3>Browser Based</h3>
+                        <p>Process text in your browser</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ENCRYPTION TOOL ================= -->
+
+        <section class="tool-section section-padding" id="encrypt">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        YOUR SECURITY WORKSPACE
+                    </span>
+
+                    <h2>
+                        Encryption & <span class="highlight">Decryption</span>
+                    </h2>
+
+                    <p>
+                        Enter your message, provide a password, and choose
+                        an operation to protect or recover your text.
+                    </p>
+
+                </div>
+
+
+                <div class="tool-card">
+
+                    <!-- INPUT PANEL -->
+
+                    <div class="input-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <span class="panel-number">01</span>
+                                <h3>Input Message</h3>
+                            </div>
+
+                            <span class="panel-icon">✎</span>
+
+                        </div>
+
+                        <label for="inputText">
+                            Your Message
+                        </label>
+
+                        <textarea
+                            id="inputText"
+                            placeholder="Type your message here..."
+                            rows="7"
+                            spellcheck="false"></textarea>
+
+                        <div class="textarea-footer">
+                            <span id="charCount">0 characters</span>
+                            <button type="button" id="clearInput" class="text-button">
+                                Clear Input
+                            </button>
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="password-group">
+
+                            <label for="password">
+                                Encryption Password
+                            </label>
+
+                            <div class="password-wrapper">
+
+                                <span class="password-icon">🔑</span>
+
+                                <input
+                                    type="password"
+                                    id="password"
+                                    placeholder="Enter a strong password"
+                                    autocomplete="new-password">
+
+                                <button
+                                    type="button"
+                                    id="togglePassword"
+                                    class="password-toggle"
+                                    aria-label="Show password">
+                                    Show
+                                </button>
+
+                            </div>
+
+                            <p class="input-hint">
+                                Use the same password to decrypt your message.
+                            </p>
+
+                        </div>
+
+
+                        <!-- ACTION BUTTONS -->
+
+                        <div class="action-buttons">
+
+                            <button
+                                type="button"
+                                id="encryptBtn"
+                                class="btn btn-primary action-btn">
+                                <span>🔒</span>
+                                Encrypt Text
+                            </button>
+
+                            <button
+                                type="button"
+                                id="decryptBtn"
+                                class="btn btn-secondary action-btn">
+                                <span>🔓</span>
+                                Decrypt Text
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OUTPUT PANEL -->
+
+                    <div class="output-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <span class="panel-number">02</span>
+                                <h3>Processed Result</h3>
+                            </div>
+
+                            <span class="result-badge" id="resultBadge">
+                                WAITING
+                            </span>
+
+                        </div>
+
+                        <label for="outputText">
+                            Output Message
+                        </label>
+
+                        <textarea
+                            id="outputText"
+                            placeholder="Your encrypted or decrypted message will appear here..."
+                            rows="7"
+                            readonly
+                            spellcheck="false"></textarea>
+
+                        <div class="textarea-footer">
+                            <span id="outputCount">0 characters</span>
+
+                            <button
+                                type="button"
+                                id="copyBtn"
+                                class="text-button">
+                                Copy Result
+                            </button>
+                        </div>
+
+
+                        <!-- RESULT MESSAGE -->
+
+                        <div class="result-message" id="resultMessage" role="status" aria-live="polite">
+
+                            <span class="result-message-icon" id="resultMessageIcon">
+                                ℹ
+                            </span>
+
+                            <span id="resultMessageText">
+                                Your result will appear here.
+                            </span>
+
+                        </div>
+
+
+                        <!-- OUTPUT ACTIONS -->
+
+                        <div class="output-actions">
+
+                            <button
+                                type="button"
+                                id="downloadBtn"
+                                class="btn btn-secondary">
+                                ↓ Download Result
+                            </button>
+
+                            <button
+                                type="button"
+                                id="clearAllBtn"
+                                class="btn btn-outline">
+                                Clear All
+                            </button>
+
+                        </div>
+
+
+                        <div class="privacy-note">
+                            <span>🛡️</span>
+
+                            <p>
+                                <strong>Privacy First</strong>
+                                <br>
+                                This tool is designed to process text in your
+                                browser without sending messages to a server.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMPORTANT NOTE -->
+
+                <div class="tool-disclaimer">
+                    <span>ⓘ</span>
+                    <p>
+                        This educational tool demonstrates text encryption.
+                        Do not use it for sensitive information until its
+                        cryptographic implementation has been properly reviewed.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="how-section section-padding" id="how-it-works">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        UNDERSTAND THE PROCESS
+                    </span>
+
+                    <h2>
+                        How Does <span class="highlight">It Work?</span>
+                    </h2>
+
+                    <p>
+                        Learn how encryption protects information and
+                        how decryption restores the original message.
+                    </p>
+
+                </div>
+
+
+                <div class="process-grid">
+
+                    <!-- STEP 1 -->
+
+                    <article class="process-card">
+
+                        <div class="process-icon">
+                            📝
+                        </div>
+
+                        <span class="step-number">STEP 01</span>
+
+                        <h3>Enter Your Message</h3>
+
+                        <p>
+                            Type the plain text you want to protect and
+                            choose an encryption password.
+                        </p>
+
+                    </article>
+
+
+                    <div class="process-arrow">→</div>
+
+
+                    <!-- STEP 2 -->
+
+                    <article class="process-card">
+
+                        <div class="process-icon">
+                            ⚙️
+                        </div>
+
+                        <span class="step-number">STEP 02</span>
+
+                        <h3>Process the Text</h3>
+
+                        <p>
+                            The encryption algorithm converts the original
+                            message into an encrypted format.
+                        </p>
+
+                    </article>
+
+
+                    <div class="process-arrow">→</div>
+
+
+                    <!-- STEP 3 -->
+
+                    <article class="process-card">
+
+                        <div class="process-icon">
+                            🔐
+                        </div>
+
+                        <span class="step-number">STEP 03</span>
+
+                        <h3>Get Your Result</h3>
+
+                        <p>
+                            Copy or download the result. Use the matching
+                            password to decrypt encrypted text.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <!-- ENCRYPTION FLOW -->
+
+                <div class="flow-card">
+
+                    <h3>Encryption Process</h3>
+
+                    <div class="flow-diagram">
+
+                        <div class="flow-box">
+                            <span>📝</span>
+                            <strong>Plain Text</strong>
+                        </div>
+
+                        <span class="flow-arrow">→</span>
+
+                        <div class="flow-box flow-highlight">
+                            <span>⚙️</span>
+                            <strong>AES Algorithm</strong>
+                        </div>
+
+                        <span class="flow-arrow">→</span>
+
+                        <div class="flow-box">
+                            <span>🔒</span>
+                            <strong>Cipher Text</strong>
+                        </div>
+
+                    </div>
+
+                    <p class="flow-caption">
+                        Decryption reverses the process when the correct
+                        password and compatible encryption parameters are supplied.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="features-section section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        BUILT FOR LEARNING
+                    </span>
+
+                    <h2>
+                        Simple Tools. <span class="highlight">Smart Security.</span>
+                    </h2>
+
+                    <p>
+                        Explore the core features of this educational
+                        encryption and decryption application.
+                    </p>
+
+                </div>
+
+
+                <div class="features-grid">
+
+                    <article class="feature-card">
+                        <div class="feature-card-icon">🔒</div>
+                        <h3>AES Encryption</h3>
+                        <p>
+                            Demonstrates symmetric encryption, where the
+                            same secret password is used for encryption
+                            and decryption.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-card-icon">🔑</div>
+                        <h3>Password Based</h3>
+                        <p>
+                            Uses a password to derive the encryption key
+                            through the cryptographic implementation.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-card-icon">📋</div>
+                        <h3>Copy & Download</h3>
+                        <p>
+                            Copy your processed text or download it
+                            as a text file.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-card-icon">📱</div>
+                        <h3>Responsive Design</h3>
+                        <p>
+                            Provides an adaptable interface for different
+                            screen sizes, including laptops and mobiles.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-card-icon">⚡</div>
+                        <h3>Easy to Use</h3>
+                        <p>
+                            A simple interface makes the encryption and
+                            decryption process easier to understand.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-card-icon">🛡️</div>
+                        <h3>Security Awareness</h3>
+                        <p>
+                            Introduces data confidentiality, password
+                            safety, and fundamental cryptography concepts.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT PROJECT ================= -->
+
+        <section class="about-section section-padding" id="about">
+
+            <div class="container about-container">
+
+                <div class="about-content">
+
+                    <span class="section-label">
+                        ABOUT THE PROJECT
+                    </span>
+
+                    <h2>
+                        Understanding <span class="highlight">Cryptography</span>
+                    </h2>
+
+                    <p>
+                        SecureText is a browser-based cybersecurity project
+                        developed to demonstrate the fundamental concepts
+                        of text encryption and decryption.
+                    </p>
+
+                    <p>
+                        It provides a simple interface for converting
+                        readable messages into encrypted text and
+                        recovering them using the correct password.
+                    </p>
+
+                    <div class="technology-list">
+
+                        <span class="technology-tag">HTML5</span>
+                        <span class="technology-tag">CSS3</span>
+                        <span class="technology-tag">JavaScript</span>
+                        <span class="technology-tag">AES</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="objective-card">
+
+                    <div class="objective-icon">🎯</div>
+
+                    <h3>Project Objective</h3>
+
+                    <p>
+                        To develop a simple web-based application that
+                        demonstrates how encryption and decryption can
+                        help protect the confidentiality of text messages.
+                    </p>
+
+                    <div class="objective-divider"></div>
+
+                    <div class="objective-detail">
+                        <span>Project Type</span>
+                        <strong>Cybersecurity</strong>
+                    </div>
+
+                    <div class="objective-detail">
+                        <span>Application</span>
+                        <strong>Web Based</strong>
+                    </div>
+
+                    <div class="objective-detail">
+                        <span>Core Function</span>
+                        <strong>Text Encryption</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SECURITY TIPS ================= -->
+
+        <section class="security-section section-padding">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        STAY SECURITY AWARE
+                    </span>
+
+                    <h2>
+                        Protect Your <span class="highlight">Passwords</span>
+                    </h2>
+
+                    <p>
+                        Follow these basic practices when working with
+                        encrypted messages.
+                    </p>
+
+                </div>
+
+
+                <div class="security-tips-grid">
+
+                    <article class="security-tip">
+                        <span>01</span>
+                        <div>
+                            <h3>Use Strong Passwords</h3>
+                            <p>
+                                Choose a long, unique password that is
+                                difficult for others to guess.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="security-tip">
+                        <span>02</span>
+                        <div>
+                            <h3>Keep Your Password Private</h3>
+                            <p>
+                                Anyone who obtains your password and
+                                encrypted message may be able to read it.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="security-tip">
+                        <span>03</span>
+                        <div>
+                            <h3>Keep a Secure Backup</h3>
+                            <p>
+                                Store important encrypted files safely
+                                and remember your password.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="security-tip">
+                        <span>04</span>
+                        <div>
+                            <h3>Verify Before Sharing</h3>
+                            <p>
+                                Do not share confidential messages or
+                                passwords with untrusted people.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA SECTION ================= -->
+
+        <section class="cta-section">
+
+            <div class="container cta-container">
+
+                <div class="cta-icon">🔐</div>
+
+                <h2>
+                    Ready to Secure Your Text?
+                </h2>
+
+                <p>
+                    Try the encryption tool and explore the fundamentals
+                    of cybersecurity.
+                </p>
+
+                <a href="#encrypt" class="btn btn-primary">
+                    Try SecureText Now <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="#home" class="logo">
+                        <span class="logo-icon">🔐</span>
+                        <span>Secure<span class="highlight">Text</span></span>
+                    </a>
+
+                    <p>
+                        Learn encryption. Understand security.
+                        Protect your information.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="#home">Home</a>
+                    <a href="#encrypt">Encryption Tool</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#about">About Project</a>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>Technologies</h3>
+
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>AES Encryption</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="currentYear">2026</span> SecureText.
+                    Educational Cybersecurity Project.
+                </p>
+
+                <p>
+                    Designed for learning and security awareness.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
